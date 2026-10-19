@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#16204A">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Daily expenses and a person-to-person ledger. Works offline. Your data stays on your phone.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Hisaab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Hisaab</h1>
+    <p id="sub"></p>
+  </div>
+</header>
+<main class="wrap" id="view"></main>
+<nav class="tabs" aria-label="Main">
+  <div class="wrap">
+    <span class="ind" aria-hidden="true"></span>
+    <button data-a="tab" data-tab="home" id="t-home">Expenses</button>
+    <button data-a="tab" data-tab="ledger" id="t-ledger">Give &amp; Take</button>
+    <button data-a="tab" data-tab="insights" id="t-insights">Insights</button>
+    <button data-a="tab" data-tab="more" id="t-more">More</button>
+  </div>
+</nav>
+<button id="fab" data-a="openSheet" aria-label="Add entry">+</button>
+<div id="scrim" hidden></div>
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Add entry" hidden>
+  <div class="grab"><i></i></div>
+  <div id="sheet-body"></div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
